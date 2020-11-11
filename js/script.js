@@ -1,26 +1,24 @@
-// Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
-// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
-// il prezzo del biglietto è definito in base ai km (0.21 € al km);
-// va applicato uno sconto del 20% per i minorenni;
-// va applicato uno sconto del 40% per gli over 65.
-
+// INPUT KILOMETRI
 var numeroKm = parseInt(prompt("Quanti kilometri dovrai fare?"));
-
-while(numeroKm < 0) {
-  numeroKm = parseInt(prompt("Il numero dei Kilometri non può essere negativo, inserisci il numero corretto dei kilometri"));
+// CONTROLLO KILOMETRI
+while(numeroKm <= 0 || isNaN(numeroKm)) {
+  numeroKm = parseInt(prompt("Il numero dei Kilometri deve essere un numero maggiore di 0, inserisci il numero corretto dei kilometri"));
 }
 console.log(numeroKm);
 
+// INPUT ETA'
 var anni = parseInt(prompt("Quanti anni hai?"));
-
-while(isNaN(anni)) {
-  anni = parseInt(prompt("L'età va scritta in numeri non in lettere, scrivi la tua età in numeri"))
+// CONTROLLO ETA'
+while(anni <= 0 || isNaN(anni)) {
+  anni = parseInt(prompt("L'età deve essere un numero maggiore di zero, inserisci correttamente la tua età"))
 }
 console.log(anni);
 
+// PREZZO SENZA SCONTO
 var prezzoSenzaSconto = numeroKm * 0.21;
 console.log(prezzoSenzaSconto);
 
+// PREZZO CON SCONTI VARI
 var prezzoFinale;
 
 if(anni < 18) {
@@ -32,4 +30,7 @@ if(anni < 18) {
 }
 console.log(prezzoFinale);
 
-document.getElementById('price').innerHTML = "Il prezzo del tuo biglietto è: " + prezzoFinale.toFixed(2) + "€"
+// STAMPA A VIDEO RISULTATO
+document.getElementById('text').innerHTML = "Il prezzo del tuo biglietto è: ";
+
+document.getElementById('number').innerHTML = prezzoFinale.toFixed(2) + "€";

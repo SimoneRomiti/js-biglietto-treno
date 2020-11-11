@@ -37,54 +37,32 @@ main{
   height: 40vh;
   border-radius: 5px;
   background: #191919;
-  position: relative;
 }
 
 #box{
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* animation-name: prova;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-delay: 3s; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#price{
-  transition: transform 1s;
+#number{
+  margin-top: 10px;
+  height: 76px;
+  line-height: 66px;
+  background: #10a21f;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.5s;
 }
-#price:hover{
-  transform: rotate(360deg);
+
+#number:hover{
+  transform: scale(1.5);
   cursor: pointer;
 }
-
-/* @keyframes prova {
-  0%{
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-  }
-  25%{
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-  }
-  50%{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-  75%{
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-  }
-  100%{
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-  }
-} */
+#number:active{
+  transform: scale(0.7);
+  cursor: pointer;
+}
