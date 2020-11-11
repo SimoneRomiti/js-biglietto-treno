@@ -46,25 +46,45 @@ main{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation-name: prova;
+  /* animation-name: prova;
   animation-duration: 2s;
   animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 3s; */
 }
 
-@keyframes prova {
+#price{
+  transition: transform 1s;
+}
+#price:hover{
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+/* @keyframes prova {
   0%{
     top: 0;
     left: 50%;
     transform: translateX(-50%) rotate(0deg);
   }
+  25%{
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
   50%{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  75%{
     top: 25%;
     left: 50%;
     transform: translateX(-50%) rotate(180deg);
   }
   100%{
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translateX(-50%) rotate(0deg);
   }
-}
+} */
